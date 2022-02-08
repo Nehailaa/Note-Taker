@@ -34,6 +34,7 @@ npm i The application will be imposed with the following command: This will star
 
 # Screenshots
 
+<img src="public/Assets/images/NoteTaker.jpg" alt="Mock-up of the project" />
 
 
 # Questions
