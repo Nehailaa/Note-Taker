@@ -30,7 +30,7 @@ Clone this repository to use this application on local machine.
 
 To install necessary dependencies, run the following command :
 
-npm i The application will be imposed with the following command: This will start localhost server on PORT 3000. node server.js Open browser and type http://localhost:3000/ to run this application on your local machine
+npm i The application will be imposed with the following command: This will start localhost server on PORT 3000. node server.js Open browser and type http://localhost:3000/ to see the Express server in action.
 
 # Screenshots
 
