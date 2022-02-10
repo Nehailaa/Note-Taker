@@ -1,6 +1,6 @@
 const util = require('util');
 const fs = require('fs');
-const uuid = require('uuid/v1');
+const { v4: uuidv4 } = require('uuid');
 const { parse } = require('path');
 
 const readFileAsync = util.promisify(fs.readFile);
@@ -8,7 +8,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 class DB {
     read() {
+        console.log("Test");
         return readFileAsync('db/db.json', 'utf-8')
+
     }
 
     write(note) {
@@ -17,6 +19,7 @@ class DB {
 
     getNotes() {
         return this.read().then(notes => {
+            console.log(notes);
             let determinedNotes;
             try {
                 determinedNotes = [].concat(JSON.parse(notes))
@@ -34,7 +37,7 @@ class DB {
             throw new Error('Tile and text are required for the note!');
         };
 
-        const newNote = { title, text, id: uuid() };
+        const newNote = { title, text, id: uuidv4() };
         
         return this.getNotes()
             .then(notes => [...notes, newNote])
